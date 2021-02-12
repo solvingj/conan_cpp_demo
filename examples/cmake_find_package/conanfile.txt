@@ -1,0 +1,6 @@
+[requires]
+boost/1.74.0
+
+[generators]
+cmake_find_package
+virtualenv

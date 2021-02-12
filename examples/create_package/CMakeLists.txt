@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.1)
+project(boost_regex_demo)
+add_compile_options(-std=c++11)
+find_package(Boost COMPONENTS regex REQUIRED)
+add_executable(regex_exe regex.cpp)
+target_link_libraries(regex_exe PRIVATE Boost::regex)
+install(TARGETS regex_exe DESTINATION bin)

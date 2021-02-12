@@ -1,0 +1,34 @@
+version: "3.5"
+
+services:
+    conan-training:
+        container_name: terminal-conan${CONTAINER_SUFFIX}
+        build:
+            dockerfile: Dockerfile
+            context: ./conan
+        env_file:
+            - .creds.env
+        networks:
+            - primary
+        volumes:
+           - type: bind
+             source: ./examples
+             target: /home/conan/examples
+        command: tail -f /dev/null
+
+    # artifactory-demo:
+        # container_name: artifactory-conan-${CONTAINER_SUFFIX}
+        # build:
+            # dockerfile: Dockerfile
+            # context: ./artifactory
+        # env_file:
+            # - .creds.env
+        # networks:
+            # primary:
+                # aliases: 
+                    # - artifactory
+        # ports:
+            # - "8084:8082"
+        # restart: always
+networks:
+    primary:
