@@ -1,7 +1,7 @@
 [settings]
 compiler=Visual Studio
 compiler.version=16
-compiler.runtime=MT
+compiler.runtime=MD
 os=Windows
 os_build=Windows
 arch=x86_64
@@ -9,5 +9,5 @@ arch_build=x86_64
 build_type=Release
 [options]
 [build_requires]
-cmake/3.19.0
+*: cmake/3.19.0
 [env]

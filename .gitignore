@@ -1,6 +1,8 @@
 # Temp Directories
 **/build_windows/*
 **/build_linux/*
+**/run_windows/*
+**/run_linux/*
 
 # Prerequisites
 *.d

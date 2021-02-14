@@ -1,9 +1,7 @@
-mkdir -p run_linux
+conan create . demo/demo --profile ../profiles/linux_gcc_7_release
+mkdir run_linux
 cd run_linux
-conan install .. --profile ../../profiles/linux_gcc_7_release
-source activate.sh
-cmake ..  -DCMAKE_BUILD_TYPE=Release
-cmake --build .   
-./regex_exe "Subject: Re: conan"
-conan create .. --profile ../../profiles/linux_gcc_7_release
-
+conan install regex/0.1.0@demo/demo -g virtualrunenv --profile ../../profiles/linux_gcc_7_release
+source activate_run.sh
+regex_exe "Subject: Re: conan"
+source deactivate_run.sh
