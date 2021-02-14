@@ -1,5 +1,5 @@
-mkdir -p build_linux
-cd build_linux
+mkdir -p run_linux
+cd run_linux
 conan install .. --profile ../../profiles/linux_gcc_7_release
 source activate.sh
 cmake ..  -DCMAKE_BUILD_TYPE=Release
