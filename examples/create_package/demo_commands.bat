@@ -5,3 +5,4 @@ conan install regex/0.1.0@demo/demo -g virtualrunenv --profile ../../profiles/wi
 call activate_run.bat
 regex_exe "Subject: Re: conan"
 call deactivate_run.bat
+cd ..
