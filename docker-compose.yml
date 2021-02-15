@@ -1,8 +1,8 @@
 version: "3.5"
 
 services:
-    conan-training:
-        container_name: terminal-conan${CONTAINER_SUFFIX}
+    conan-terminal:
+        container_name: conan-terminal${CONTAINER_SUFFIX}
         build:
             dockerfile: Dockerfile
             context: ./conan
@@ -16,8 +16,8 @@ services:
              target: /home/conan/examples
         command: tail -f /dev/null
 
-    # artifactory-demo:
-        # container_name: artifactory-conan-${CONTAINER_SUFFIX}
+    # artifactory-ce:
+        # container_name: artifactory-ce${CONTAINER_SUFFIX}
         # build:
             # dockerfile: Dockerfile
             # context: ./artifactory
