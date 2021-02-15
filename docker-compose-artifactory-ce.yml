@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+    artifactory-ce:
+        container_name: artifactory-ce${CONTAINER_SUFFIX}
+        build:
+            dockerfile: Dockerfile
+            context: ./artifactory
+        env_file:
+            - .creds.env
+        networks:
+            primary:
+                aliases: 
+                    - artifactory
+        ports:
+            - "8084:8082"
+        restart: always
+        
+networks:
+    primary:
