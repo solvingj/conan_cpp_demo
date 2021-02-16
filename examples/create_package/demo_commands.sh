@@ -5,3 +5,4 @@ conan install regex/0.1.0@demo/demo -g virtualrunenv --profile ../../profiles/li
 source activate_run.sh
 regex_exe "Subject: Re: conan"
 source deactivate_run.sh
+cd ..

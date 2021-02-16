@@ -13,7 +13,8 @@ services:
                 aliases: 
                     - artifactory
         ports:
-            - "8084:8082"
+            - 8081:8081
+            - 8082:8082
         restart: always
         
 networks:
